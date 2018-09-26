@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RoaringBitmap Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RoaringBitmap" class="dashAnchor"></a>
+    <a title="RoaringBitmap Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (98% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RoaringBitmap Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RoaringBitmap.html">RoaringBitmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RoaringBitmap/RoaringBitmapIterator.html">– RoaringBitmapIterator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:12SwiftRoaring0B10Statisticsa">RoaringStatistics</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RoaringBitmap</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RoaringBitmap</span><span class="p">:</span> <span class="kt">Sequence</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span>
+                           <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">ExpressibleByArrayLiteral</span></code></pre>
+
+                </div>
+              </div>
+            <p>Swift wrapper for CRoaring (a C/C++ implementation at <a href="https://github.com/RoaringBitmap/CRoaring">https://github.com/RoaringBitmap/CRoaring</a>)</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s8SequenceP7Element"></a>
+                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s8SequenceP7Element">Element</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new bitmap (initially empty)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapCACs6UInt64V3min_AE3maxs6UInt32V4steptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(min:max:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapCACs6UInt64V3min_AE3maxs6UInt32V4steptcfc">init(min:max:step:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add all the values between min (included) and max (excluded) that are at a
+distance k*step from min.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapCACs6UInt32V8capacity_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(capacity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapCACs6UInt32V8capacity_tcfc">init(capacity:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new bitmap (initially empty) with a provided
+container-storage capacity (it is a performance hint).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">capacity</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapCACSays6UInt32VG6values_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(values:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapCACSays6UInt32VG6values_tcfc">init(values:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new bitmap from a pointer of UInt32 integers</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt32</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s25ExpressibleByArrayLiteralPx0cD7ElementQz05arrayD0d_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arrayLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s25ExpressibleByArrayLiteralPx0cD7ElementQz05arrayD0d_tcfc">init(arrayLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">arrayLiteral</span><span class="p">:</span> <span class="kt"><a href="../Classes/RoaringBitmap.html#/s:s8SequenceP7Element">Element</a></span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC12intersectionA2CF"></a>
+                    <a name="//apple_ref/swift/Method/intersection(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC12intersectionA2CF">intersection(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the intersection between two bitmaps and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">intersection</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC1aoiA2C_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/&amp;(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC1aoiA2C_ACtFZ">&amp;(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the intersection between two bitmaps and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC16formIntersectionyACF"></a>
+                    <a name="//apple_ref/swift/Method/formIntersection(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC16formIntersectionyACF">formIntersection(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version modifies x1, x1 == x2 is allowed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">formIntersection</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC2aeoiyAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/&amp;=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC2aeoiyAC_ACtFZ">&amp;=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version modifies x1, x1 == x2 is allowed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">&amp;=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC17intersectionCounts6UInt64VACF"></a>
+                    <a name="//apple_ref/swift/Method/intersectionCount(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC17intersectionCounts6UInt64VACF">intersectionCount(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the size of the intersection between two bitmaps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">intersectionCount</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC9intersectSbACF"></a>
+                    <a name="//apple_ref/swift/Method/intersect(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC9intersectSbACF">intersect(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check whether two bitmaps intersect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">intersect</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC12jaccardIndexSdACF"></a>
+                    <a name="//apple_ref/swift/Method/jaccardIndex(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC12jaccardIndexSdACF">jaccardIndex(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the Jaccard index between two bitmaps. (Also known as the Tanimoto
+ distance,
+ or the Jaccard similarity coefficient)</p>
+
+<p>The Jaccard index is undefined if both bitmaps are empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">jaccardIndex</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC10unionCounts6UInt64VACF"></a>
+                    <a name="//apple_ref/swift/Method/unionCount(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC10unionCounts6UInt64VACF">unionCount(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the size of the union between two bitmaps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unionCount</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC16subtractingCounts6UInt64VACF"></a>
+                    <a name="//apple_ref/swift/Method/subtractingCount(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC16subtractingCounts6UInt64VACF">subtractingCount(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the size of the difference (andnot) between two bitmaps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subtractingCount</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC24symmetricDifferenceCounts6UInt64VACF"></a>
+                    <a name="//apple_ref/swift/Method/symmetricDifferenceCount(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC24symmetricDifferenceCounts6UInt64VACF">symmetricDifferenceCount(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the size of the symmetric difference (andnot) between two bitmaps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">symmetricDifferenceCount</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC5unionA2CF"></a>
+                    <a name="//apple_ref/swift/Method/union(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC5unionA2CF">union(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the union between two bitmaps and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">union</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC1ooiA2C_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/|(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC1ooiA2C_ACtFZ">|(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the union between two bitmaps and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">|</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC9formUnionyACF"></a>
+                    <a name="//apple_ref/swift/Method/formUnion(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC9formUnionyACF">formUnion(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version of union, modifies x1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">formUnion</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC2oeoiyAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/|=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC2oeoiyAC_ACtFZ">|=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version of union, modifies x1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">|=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC9unionManyACSayACGF"></a>
+                    <a name="//apple_ref/swift/Method/unionMany(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC9unionManyACSayACGF">unionMany(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compute the union of &lsquo;number&rsquo; bitmaps. See also unionManyHeap().</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unionMany</span><span class="p">(</span><span class="n">_</span> <span class="nv">xs</span><span class="p">:</span> <span class="p">[</span><span class="kt">RoaringBitmap</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC13unionManyHeapACSayACGF"></a>
+                    <a name="//apple_ref/swift/Method/unionManyHeap(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC13unionManyHeapACSayACGF">unionManyHeap(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compute the union of &lsquo;number&rsquo; bitmaps using a heap. This can
+ sometimes be faster than unionMany() which uses
+ a naive algorithm.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unionManyHeap</span><span class="p">(</span><span class="n">_</span> <span class="nv">xs</span><span class="p">:</span> <span class="p">[</span><span class="kt">RoaringBitmap</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC19symmetricDifferenceA2CF"></a>
+                    <a name="//apple_ref/swift/Method/symmetricDifference(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC19symmetricDifferenceA2CF">symmetricDifference(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the symmetric difference (xor) between two bitmaps
+and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">symmetricDifference</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC1xoiA2C_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/^(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC1xoiA2C_ACtFZ">^(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the symmetric difference (xor) between two bitmaps
+and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">^</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC23formSymmetricDifferenceyACF"></a>
+                    <a name="//apple_ref/swift/Method/formSymmetricDifference(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC23formSymmetricDifferenceyACF">formSymmetricDifference(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version of symmetricDifference(&hellip;), modifies x1. x1 != x2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">formSymmetricDifference</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC2xeoiyAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/^=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC2xeoiyAC_ACtFZ">^=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version of symmetricDifference(&hellip;), modifies x1. x1 != x2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">^=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC23symmetricDifferenceManyACSayACGF"></a>
+                    <a name="//apple_ref/swift/Method/symmetricDifferenceMany(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC23symmetricDifferenceManyACSayACGF">symmetricDifferenceMany(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compute the symmetric difference of n bitmaps.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">symmetricDifferenceMany</span><span class="p">(</span><span class="n">_</span> <span class="nv">xs</span><span class="p">:</span> <span class="p">[</span><span class="kt">RoaringBitmap</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC11subtractingA2CF"></a>
+                    <a name="//apple_ref/swift/Method/subtracting(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC11subtractingA2CF">subtracting(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the  difference (andnot) between two bitmaps
+and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subtracting</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC1soiA2C_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/-(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC1soiA2C_ACtFZ">-(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the  difference (andnot) between two bitmaps
+and returns new bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC8subtractyACF"></a>
+                    <a name="//apple_ref/swift/Method/subtract(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC8subtractyACF">subtract(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version of subtracting(&hellip;), modifies x1. x1 != x2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subtract</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC2seoiyAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/-=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC2seoiyAC_ACtFZ">-=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inplace version of subtracting(&hellip;), modifies x1. x1 != x2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">-=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC6equalsSbACF"></a>
+                    <a name="//apple_ref/swift/Method/equals(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC6equalsSbACF">equals(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return true if the two bitmaps contain the same elements.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">equals</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC2eeoiSbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC2eeoiSbAC_ACtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return true if the two bitmaps contain the same elements.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC2neoiSbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/!=(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC2neoiSbAC_ACtFZ">!=(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return true if the two bitmaps DO NOT contain the same elements.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">!=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC8isSubsetSbAC2of_tF"></a>
+                    <a name="//apple_ref/swift/Method/isSubset(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC8isSubsetSbAC2of_tF">isSubset(of:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return true if all the elements of ra1 are also in ra2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isSubset</span><span class="p">(</span><span class="n">of</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC14isStrictSubsetSbAC2of_tF"></a>
+                    <a name="//apple_ref/swift/Method/isStrictSubset(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC14isStrictSubsetSbAC2of_tF">isStrictSubset(of:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return true if all the elements of ra1 are also in ra2 and ra2 is strictly
+greater than ra1.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isStrictSubset</span><span class="p">(</span><span class="n">of</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC9lazyUnionA2C_Sb16bitsetconversiontF"></a>
+                    <a name="//apple_ref/swift/Method/lazyUnion(_:bitsetconversion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC9lazyUnionA2C_Sb16bitsetconversiontF">lazyUnion(_:bitsetconversion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>(For expert users who seek high performance.)</p>
+
+<p>Computes the union between two bitmaps and returns new bitmap.</p>
+
+<p>The lazy version defers some computations such as the maintenance of the
+ cardinality counts. Thus you need
+ to call repairAfterLazy() after executing <q>lazy</q> computations.
+ It is safe to repeatedly call formLazyUnion() on the result.
+ The bitsetconversion conversion is a flag which determines
+ whether container-container operations force a bitset conversion.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lazyUnion</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">bitsetconversion</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC13formLazyUnionyAC_Sb16bitsetconversiontF"></a>
+                    <a name="//apple_ref/swift/Method/formLazyUnion(_:bitsetconversion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC13formLazyUnionyAC_Sb16bitsetconversiontF">formLazyUnion(_:bitsetconversion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>(For expert users who seek high performance.)
+Inplace version of lazyUnion(), modifies x1
+The bitsetconversion conversion is a flag which determines
+whether container-container operations force a bitset conversion.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">formLazyUnion</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">,</span> <span class="nv">bitsetconversion</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC15repairAfterLazyyyF"></a>
+                    <a name="//apple_ref/swift/Method/repairAfterLazy()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC15repairAfterLazyyyF">repairAfterLazy()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>(For expert users who seek high performance.)</p>
+
+<p>Execute maintenance operations on a bitmap created from
+ lazyUnion(&hellip;) or modified with formLazyUnion(&hellip;).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">repairAfterLazy</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC23lazySymmetricDifferenceA2CF"></a>
+                    <a name="//apple_ref/swift/Method/lazySymmetricDifference(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC23lazySymmetricDifferenceA2CF">lazySymmetricDifference(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the symmetric difference between two bitmaps and returns new bitmap.
+The caller is
+ responsible for memory management.</p>
+
+<p>The lazy version defers some computations such as the maintenance of the
+ cardinality counts. Thus you need
+ to call repairAfterLazy() after executing <q>lazy</q> computations.
+ It is safe to repeatedly call formLazySymmetricDifference(&hellip;) on the result.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lazySymmetricDifference</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC27formLazySymmetricDifferenceyACF"></a>
+                    <a name="//apple_ref/swift/Method/formLazySymmetricDifference(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC27formLazySymmetricDifferenceyACF">formLazySymmetricDifference(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>(For expert users who seek high performance.)
+ Inplace version of lazySymmetricDifference(&hellip;), modifies x1. x1 != x2</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">formLazySymmetricDifference</span><span class="p">(</span><span class="n">_</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">RoaringBitmap</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC4flipACs6UInt64V10rangeStart_AF0F3EndtF"></a>
+                    <a name="//apple_ref/swift/Method/flip(rangeStart:rangeEnd:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC4flipACs6UInt64V10rangeStart_AF0F3EndtF">flip(rangeStart:rangeEnd:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>compute the negation of the roaring bitmap within a specified
+interval: [rangeStart, rangeEnd). The number of negated values is
+rangeEnd - rangeStart.
+Areas outside the range are passed through unchanged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">flip</span><span class="p">(</span><span class="nv">rangeStart</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="nv">rangeEnd</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC11flipInplaceys6UInt64V10rangeStart_AF0G3EndtF"></a>
+                    <a name="//apple_ref/swift/Method/flipInplace(rangeStart:rangeEnd:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC11flipInplaceys6UInt64V10rangeStart_AF0G3EndtF">flipInplace(rangeStart:rangeEnd:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>compute (in place) the negation of the roaring bitmap within a specified
+interval: [rangeStart, rangeEnd). The number of negated values is
+rangeEnd - rangeStart.
+Areas outside the range are passed through unchanged.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">flipInplace</span><span class="p">(</span><span class="nv">rangeStart</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="nv">rangeEnd</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC4copyACyF"></a>
+                    <a name="//apple_ref/swift/Method/copy()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC4copyACyF">copy()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">copy</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC3addys6UInt32VF"></a>
+                    <a name="//apple_ref/swift/Method/add(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC3addys6UInt32VF">add(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add value to bitmap</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC7addManyySays6UInt32VG6values_tF"></a>
+                    <a name="//apple_ref/swift/Method/addMany(values:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC7addManyySays6UInt32VG6values_tF">addMany(values:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add values in format [UInt32], faster than repeatedly calling
+ add(&hellip;)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addMany</span><span class="p">(</span><span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt32</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC8addCheckSbs6UInt32VF"></a>
+                    <a name="//apple_ref/swift/Method/addCheck(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC8addCheckSbs6UInt32VF">addCheck(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add value x
+Returns true if a new value was added, false if the value was already existing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addCheck</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC14addRangeClosedys6UInt32V3min_AF3maxtF"></a>
+                    <a name="//apple_ref/swift/Method/addRangeClosed(min:max:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC14addRangeClosedys6UInt32V3min_AF3maxtF">addRangeClosed(min:max:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add all values in range [min, max]</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRangeClosed</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC8addRangeys6UInt64V3min_AF3maxtF"></a>
+                    <a name="//apple_ref/swift/Method/addRange(min:max:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC8addRangeys6UInt64V3min_AF3maxtF">addRange(min:max:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add all values in range [min, max)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRange</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC6removeys6UInt32VF"></a>
+                    <a name="//apple_ref/swift/Method/remove(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC6removeys6UInt32VF">remove(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove value x</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC17removeRangeClosedys6UInt32V3min_AF3maxtF"></a>
+                    <a name="//apple_ref/swift/Method/removeRangeClosed(min:max:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC17removeRangeClosedys6UInt32V3min_AF3maxtF">removeRangeClosed(min:max:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove all values in range [min, max]</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeRangeClosed</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC11removeRangeys6UInt64V3min_AF3maxtF"></a>
+                    <a name="//apple_ref/swift/Method/removeRange(min:max:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC11removeRangeys6UInt64V3min_AF3maxtF">removeRange(min:max:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove all values in range [min, max)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeRange</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC11removeCheckSbs6UInt32VF"></a>
+                    <a name="//apple_ref/swift/Method/removeCheck(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC11removeCheckSbs6UInt32VF">removeCheck(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove value x
+Returns true if a new value was removed, false if the value was not existing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeCheck</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC5clearyyF"></a>
+                    <a name="//apple_ref/swift/Method/clear()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC5clearyyF">clear()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Empties the bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC5counts6UInt64Vvp"></a>
+                    <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC5counts6UInt64Vvp">count</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the cardinality of the bitmap (number of elements).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC8containsSbs6UInt32VF"></a>
+                    <a name="//apple_ref/swift/Method/contains(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC8containsSbs6UInt32VF">contains(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check if value x is present</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">contains</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC13containsRangeSbs6UInt64V5start_AF3endtF"></a>
+                    <a name="//apple_ref/swift/Method/containsRange(start:end:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC13containsRangeSbs6UInt64V5start_AF3endtF">containsRange(start:end:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check whether a range of values from start (included) to end (excluded) is present</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">containsRange</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">,</span> <span class="nv">end</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC7isEmptySbvp"></a>
+                    <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC7isEmptySbvp">isEmpty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check whether the bitmap is empty</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC5printyyF"></a>
+                    <a name="//apple_ref/swift/Method/print()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC5printyyF">print()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Print the content of the bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">print</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC8describeyyF"></a>
+                    <a name="//apple_ref/swift/Method/describe()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC8describeyyF">describe()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describe the inner structure of the bitmap.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">describe</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC7toArraySays6UInt32VGyF"></a>
+                    <a name="//apple_ref/swift/Method/toArray()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC7toArraySays6UInt32VGyF">toArray()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convert the bitmap to an array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toArray</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UInt32</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC20removeRunCompressionSbyF"></a>
+                    <a name="//apple_ref/swift/Method/removeRunCompression()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC20removeRunCompressionSbyF">removeRunCompression()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove run-length encoding even when it is more space efficient
+return whether a change was applied</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeRunCompression</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC11runOptimizeSbyF"></a>
+                    <a name="//apple_ref/swift/Method/runOptimize()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC11runOptimizeSbyF">runOptimize()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>convert array and bitmap containers to run containers when it is more</p>
+
+<ul>
+<li>efficient;</li>
+<li>also convert from run containers when more space efficient.  Returns</li>
+<li>true if the result has at least one run container.</li>
+<li>Additional savings might be possible by calling shrinkToFit().</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">runOptimize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC6shrinkSiyF"></a>
+                    <a name="//apple_ref/swift/Method/shrink()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC6shrinkSiyF">shrink()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If needed, reallocate memory to shrink the memory usage. Returns
+the number of bytes saved.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shrink</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">size_t</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC9serializeSiSays4Int8VG6buffer_tF"></a>
+                    <a name="//apple_ref/swift/Method/serialize(buffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC9serializeSiSays4Int8VG6buffer_tF">serialize(buffer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>write the bitmap to an output pointer, this output buffer should refer to
+ at least SizeInBytes(&hellip;) allocated bytes.</p>
+
+<p>see portableSerialize if you want a format that&rsquo;s compatible
+ with Java and Go implementations</p>
+
+<p>this format has the benefit of being sometimes more space efficient than
+ portableSerialize
+ e.g., when the data is sparse.</p>
+
+<p>Returns how many bytes were written which should be
+ SizeInBytes(&hellip;).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int8</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">size_t</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC11deserializeACSays4Int8VG6buffer_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(buffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC11deserializeACSays4Int8VG6buffer_tFZ">deserialize(buffer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>use with serialize(&hellip;)</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    see portableSerialize(&hellip;) if you want a format that&rsquo;s
+
+</div>
+<li>compatible with Java and Go implementations</li>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int8</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC11sizeInBytesSiyF"></a>
+                    <a name="//apple_ref/swift/Method/sizeInBytes()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC11sizeInBytesSiyF">sizeInBytes()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How many bytes are required to serialize this bitmap (NOT compatible
+with Java and Go versions)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sizeInBytes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">size_t</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC19portableDeserializeACSays4Int8VG6buffer_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/portableDeserialize(buffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC19portableDeserializeACSays4Int8VG6buffer_tFZ">portableDeserialize(buffer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>read a bitmap from a serialized version. This is meant to be compatible with
+the Java and Go versions. See format specification at
+<a href="https://github.com/RoaringBitmap/RoaringFormatSpec">https://github.com/RoaringBitmap/RoaringFormatSpec</a>
+In case of failure, a null pointer is returned.
+This function is unsafe in the sense that if there is no valid serialized
+bitmap at the pointer, then many bytes could be read, possibly causing a buffer
+overflow. For a safer approach,
+call portableDeserializeSafe(&hellip;).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">portableDeserialize</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int8</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC23portableDeserializeSafeACSays4Int8VG6buffer_Si8maxbytestFZ"></a>
+                    <a name="//apple_ref/swift/Method/portableDeserializeSafe(buffer:maxbytes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC23portableDeserializeSafeACSays4Int8VG6buffer_Si8maxbytestFZ">portableDeserializeSafe(buffer:maxbytes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>read a bitmap from a serialized version in a safe manner (reading up to maxbytes).
+This is meant to be compatible with
+the Java and Go versions. See format specification at
+<a href="https://github.com/RoaringBitmap/RoaringFormatSpec">https://github.com/RoaringBitmap/RoaringFormatSpec</a>
+In case of failure, a nil pointer is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">portableDeserializeSafe</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int8</span><span class="p">],</span> <span class="nv">maxbytes</span><span class="p">:</span> <span class="n">size_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RoaringBitmap</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC23portableDeserializeSizeSiSays4Int8VG6buffer_Si8maxbytestFZ"></a>
+                    <a name="//apple_ref/swift/Method/portableDeserializeSize(buffer:maxbytes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC23portableDeserializeSizeSiSays4Int8VG6buffer_Si8maxbytestFZ">portableDeserializeSize(buffer:maxbytes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check how many bytes would be read (up to maxbytes) at this pointer if there
+is a bitmap, returns zero if there is no valid bitmap.
+This is meant to be compatible with
+the Java and Go versions. See format specification at
+<a href="https://github.com/RoaringBitmap/RoaringFormatSpec">https://github.com/RoaringBitmap/RoaringFormatSpec</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">portableDeserializeSize</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int8</span><span class="p">],</span> <span class="nv">maxbytes</span><span class="p">:</span> <span class="n">size_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">size_t</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC19portableSizeInBytesSiyF"></a>
+                    <a name="//apple_ref/swift/Method/portableSizeInBytes()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC19portableSizeInBytesSiyF">portableSizeInBytes()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>How many bytes are required to serialize this bitmap (meant to be compatible
+with Java and Go versions).  See format specification at
+<a href="https://github.com/RoaringBitmap/RoaringFormatSpec">https://github.com/RoaringBitmap/RoaringFormatSpec</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">portableSizeInBytes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">size_t</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC17portableSerializeSiSays4Int8VG6buffer_tF"></a>
+                    <a name="//apple_ref/swift/Method/portableSerialize(buffer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC17portableSerializeSiSays4Int8VG6buffer_tF">portableSerialize(buffer:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>write a bitmap to a char buffer.  The output buffer should refer to at least
+ portableSizeInBytes() bytes of allocated memory.
+This is meant to be compatible with
+the
+Java and Go versions. Returns how many bytes were written which should be
+portableSizeInBytes().  See format specification at
+<a href="https://github.com/RoaringBitmap/RoaringFormatSpec">https://github.com/RoaringBitmap/RoaringFormatSpec</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">portableSerialize</span><span class="p">(</span><span class="nv">buffer</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int8</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">size_t</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC6selectSbs6UInt32V4rank_AF5valuetF"></a>
+                    <a name="//apple_ref/swift/Method/select(rank:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC6selectSbs6UInt32V4rank_AF5valuetF">select(rank:value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+<ul>
+<li>If the size of the roaring bitmap is strictly greater than rank, then this
+function returns true and set the value to the the given rank.
+Otherwise, it returns false.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">select</span><span class="p">(</span><span class="nv">rank</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC4ranks6UInt64Vs6UInt32V5value_tF"></a>
+                    <a name="//apple_ref/swift/Method/rank(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC4ranks6UInt64Vs6UInt32V5value_tF">rank(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the number of integers that are smaller or equal to x.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rank</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC3mins6UInt32VyF"></a>
+                    <a name="//apple_ref/swift/Method/min()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC3mins6UInt32VyF">min()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the smallest value in the set.
+Returns UINT32_MAX if the set is empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">min</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC3maxs6UInt32VyF"></a>
+                    <a name="//apple_ref/swift/Method/max()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC3maxs6UInt32VyF">max()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the greatest value in the set.
+Returns 0 if the set is empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">max</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC10statisticsSC08roaring_D2_sVyF"></a>
+                    <a name="//apple_ref/swift/Method/statistics()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC10statisticsSC08roaring_D2_sVyF">statistics()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>(For advanced users.)
+Collect statistics about the bitmap, see roaring_statistics_t for
+a description of RoaringStatistics</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">statistics</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:12SwiftRoaring0B10Statisticsa">RoaringStatistics</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC12makeIteratorAC0bcE0VyF"></a>
+                    <a name="//apple_ref/swift/Method/makeIterator()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC12makeIteratorAC0bcE0VyF">makeIterator()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a RoaringBitmapIterator.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeIterator</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RoaringBitmap/RoaringBitmapIterator.html">RoaringBitmapIterator</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12SwiftRoaring0B6BitmapC0bC8IteratorV"></a>
+                    <a name="//apple_ref/swift/Struct/RoaringBitmapIterator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12SwiftRoaring0B6BitmapC0bC8IteratorV">RoaringBitmapIterator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>code used to iterate through values in a roaring bitmap</p>
+
+                        <a href="../Classes/RoaringBitmap/RoaringBitmapIterator.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RoaringBitmapIterator</span> <span class="p">:</span> <span class="kt">IteratorProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s8HashableP9hashValueSivp"></a>
+                    <a name="//apple_ref/swift/Property/hashValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s8HashableP9hashValueSivp">hashValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-09-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

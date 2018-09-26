@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (98% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/RoaringBitmap.html">RoaringBitmap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RoaringBitmap/RoaringBitmapIterator.html">– RoaringBitmapIterator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:12SwiftRoaring0B10Statisticsa">RoaringStatistics</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='swiftroaring' class='heading'>SwiftRoaring</h1>
+
+<p><a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift4-compatible-green.svg?style=flat" alt="Swift 4 compatible" /></a>
+<a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg"/></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://travis-ci.org/piotte13/SwiftRoaring"><img src="https://travis-ci.org/piotte13/SwiftRoaring.svg?branch=master" alt="Build Status"></a>
+<a href="https://codecov.io/gh/piotte13/SwiftRoaring"><img src="https://codecov.io/gh/piotte13/SwiftRoaring/branch/master/graph/badge.svg" alt="codecov"></a></p>
+
+<p>Swift wrapper for CRoaring (a C/C++ implementation at <a href="https://github.com/RoaringBitmap/CRoaring">https://github.com/RoaringBitmap/CRoaring</a>)</p>
+
+<p>Roaring bitmaps are used by several important systems:</p>
+
+<ul>
+<li><a href="http://lucene.apache.org/core/">Apache Lucene</a> and derivative systems such as Solr and <a href="https://www.elastic.co/">Elastic</a>,</li>
+<li>Metamarkets&rsquo; <a href="http://druid.io/">Druid</a>,</li>
+<li><a href="http://spark.apache.org">Apache Spark</a>,</li>
+<li><a href="https://github.com/Netflix/atlas">Netflix Atlas</a>,</li>
+<li><a href="https://github.com/linkedin/pinot/wiki">LinkedIn Pinot</a>,</li>
+<li><a href="http://www.opensearchserver.com">OpenSearchServer</a>,</li>
+<li><a href="https://github.com/jpillora/cloud-torrent">Cloud Torrent</a>,</li>
+<li><a href="https://pypi.python.org/pypi/Whoosh/">Whoosh</a>,</li>
+<li><a href="https://www.pilosa.com/">Pilosa</a>,</li>
+<li><a href="https://www.visualstudio.com/team-services/">Microsoft Visual Studio Team Services (VSTS)</a>,</li>
+<li>eBay&rsquo;s <a href="http://kylin.io">Apache Kylin</a>.</li>
+</ul>
+
+<p>Roaring bitmaps are found to work well in many important applications:</p>
+
+<blockquote>
+<p>Use Roaring for bitmap compression whenever possible. Do not use other bitmap compression methods (<a href="http://db.ucsd.edu/wp-content/uploads/2017/03/sidm338-wangA.pdf">Wang et al., SIGMOD 2017</a>)</p>
+</blockquote>
+<h3 id='benchmarking' class='heading'>Benchmarking</h3>
+
+<p>There is an entire repository dedicated to benchmarking.  You can find it <a href="https://github.com/piotte13/SwiftRoaringBenchmarks">here</a>.</p>
+
+<blockquote>
+<p>The following benchmarks were produced using this CPU model: <b>Intel&reg; Core&trade; i7-4770 CPU @ 3.40GHz</b></p>
+
+<ul>
+<li><a href="http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/comparison-table.html">Comparison table</a></li>
+<li><a href="http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/bar-chart.html">Bar chart</a></li>
+</ul>
+
+<p>The following benchmarks were produced using this CPU model: <b>Intel&reg; Core&trade; i7-8700 CPU @ 3.20GHz</b></p>
+
+<ul>
+<li><a href="http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-8700%20CPU%20%40%203.20GHz/census-income/comparison-table.html">Comparison table</a></li>
+<li><a href="http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-8700%20CPU%20%40%203.20GHz/census-income/bar-chart.html">Bar chart</a></li>
+</ul>
+</blockquote>
+<h3 id='dependencies' class='heading'>Dependencies</h3>
+
+<p>Swift 4.0 or higher</p>
+<h3 id='usage' class='heading'>Usage</h3>
+<h4 id='1-intall-swiftroaring' class='heading'>1. Intall SwiftRoaring</h4>
+
+<ul>
+<li><h5 id='with-a-href-https-github-com-apple-swift-package-manager-swift-package-manager-a' class='heading'>With <a href="https://github.com/apple/swift-package-manager">Swift Package Manager</a>:</h5>
+
+<p>Edit <code>Package.swift</code> so that it reads something like this:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
+
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"foo"</span><span class="p">,</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/piotte13/SwiftRoaring"</span><span class="p">,</span>  <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.4"</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">target</span><span class="p">(</span>
+            <span class="nv">name</span><span class="p">:</span> <span class="s">"foo"</span><span class="p">,</span>
+            <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s">"SwiftRoaring"</span><span class="p">]),</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></li>
+<li><h5 id='with-a-href-https-github-com-carthage-carthage-carthage-a' class='heading'>With <a href="https://github.com/Carthage/Carthage">Carthage</a>:</h5>
+<pre class="highlight swift"><code><span class="n">github</span> <span class="s">"piotte13/SwiftRoaring"</span>
+</code></pre>
+<h4 id='2-import-swiftroaring-in-your-project' class='heading'>2. Import SwiftRoaring in your project</h4></li>
+</ul>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SwiftRoaring</span><span class="p">;</span>
+
+<span class="o">....</span>
+</code></pre>
+<h3 id='example' class='heading'>Example</h3>
+
+<p>Here is a simplified but complete example:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SwiftRoaring</span>
+
+<span class="c1">//Create a new Roaring Bitmap</span>
+<span class="k">let</span> <span class="nv">bitmap</span> <span class="o">=</span> <span class="kt">RoaringBitmap</span><span class="p">()</span>
+
+<span class="c1">//Example: Add Range</span>
+<span class="n">bitmap</span><span class="o">.</span><span class="nf">addRange</span><span class="p">(</span><span class="nv">min</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1">//Example: copy</span>
+<span class="k">let</span> <span class="nv">cpy</span> <span class="o">=</span> <span class="n">bitmap</span><span class="o">.</span><span class="nf">copy</span><span class="p">()</span>
+
+<span class="c1">//Example: Operators</span>
+<span class="k">let</span> <span class="nv">and</span> <span class="o">=</span> <span class="n">bitmap</span> <span class="o">&amp;&amp;</span> <span class="n">cpy</span>
+
+<span class="c1">//Example: Iterate</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">bitmap</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//See documentation for more functionalities!</span>
+
+</code></pre>
+<h3 id='documentation' class='heading'>Documentation</h3>
+
+<p><a href="https://piotte13.github.io/SwiftRoaring/">https://piotte13.github.io/SwiftRoaring/</a></p>
+<h3 id='development' class='heading'>Development</h3>
+
+<p>You can build using Swift Package Manager as follows:</p>
+<pre class="highlight shell"><code>swift build  -Xcc -march<span class="o">=</span>native  --configuration release
+<span class="k">$(</span>swift build   --configuration release  --show-bin-path<span class="k">)</span>/fun
+</code></pre>
+
+<p>You can run tests using Swift Package Manager as follows:</p>
+<pre class="highlight shell"><code>swift <span class="nb">test</span>
+</code></pre>
+<h3 id='interactive-use' class='heading'>Interactive use</h3>
+<pre class="highlight plaintext"><code>$ swift build  -Xcc -march=native  --configuration release
+$ swift -I .build/release -L .build/release -lSwiftRoaringDynamic
+  1&gt; import SwiftRoaring
+  2&gt; let bitmap = RoaringBitmap()
+  3&gt; bitmap.add(1)
+</code></pre>
+<h3 id='mailing-list-discussion-group' class='heading'>Mailing list/discussion group</h3>
+
+<p><a href="https://groups.google.com/forum/#!forum/roaring-bitmaps">https://groups.google.com/forum/#!forum/roaring-bitmaps</a></p>
+<h3 id='compatibility-with-java-roaringbitmap-library' class='heading'>Compatibility with Java RoaringBitmap library</h3>
+
+<p>You can read bitmaps in Go, Java, C, C++ that have been serialized in Java, C, C++.</p>
+<h3 id='references' class='heading'>References</h3>
+
+<ul>
+<li>Daniel Lemire, Owen Kaser, Nathan Kurz, Luca Deri, Chris O&#39;Hara, François Saint-Jacques, Gregory Ssi-Yan-Kai,  Software: Practice and Experience Volume 48, Issue 4 April 2018 Pages 867-895 <a href="https://arxiv.org/abs/1709.07821">arXiv:1709.07821</a></li>
+<li>Samy Chambi, Daniel Lemire, Owen Kaser, Robert Godin,
+Better bitmap performance with Roaring bitmaps,
+Software: Practice and Experience Volume 46, Issue 5, pages 709–719, May 2016
+<a href="http://arxiv.org/abs/1402.6407">http://arxiv.org/abs/1402.6407</a> This paper used data from <a href="http://lemire.me/data/realroaring2014.html">http://lemire.me/data/realroaring2014.html</a></li>
+<li>Daniel Lemire, Gregory Ssi-Yan-Kai, Owen Kaser, Consistently faster and smaller compressed bitmaps with Roaring, Software: Practice and Experience Volume 46, Issue 11, pages 1547-1569, November 2016 <a href="http://arxiv.org/abs/1603.06549">http://arxiv.org/abs/1603.06549</a></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-09-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

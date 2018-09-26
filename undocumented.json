@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/travis/build/piotte13/SwiftRoaring/Sources/SwiftRoaring/RoaringBitmap.swift",
+      "line": 441,
+      "symbol": "RoaringBitmap.copy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/travis/build/piotte13/SwiftRoaring"
+}
