@@ -308,6 +308,7 @@ class swiftRoaringTests: XCTestCase {
     }
 
     func testHashValue(){
+        rbm.addRangeClosed(min:0, max:500)
         print(rbm.hashValue)
     }
 
