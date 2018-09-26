@@ -46,34 +46,31 @@ Swift 4.0 or higher
 
 ### Usage
 
-Create a directory where you will create your application:
+#### 1. Intall SwiftRoaring
 
-```bash
-mkdir foo
-cd foo
-swift package init --type executable
-```
+* ##### With [Swift Package Manager](https://github.com/apple/swift-package-manager):
+    Edit ``Package.swift`` so that it reads something like this:
+    ```swift
+    import PackageDescription
 
-Then edit ``Package.swift`` so that it reads something like this:
+    let package = Package(
+        name: "foo",
+        dependencies: [
+            .package(url: "https://github.com/piotte13/SwiftRoaring",  from: "1.0.4")
+        ],
+        targets: [
+            .target(
+                name: "foo",
+                dependencies: ["SwiftRoaring"]),
+        ]
+    )
+    ```
 
-
-```swift
-import PackageDescription
-
-let package = Package(
-    name: "foo",
-    dependencies: [
-   .package(url: "https://github.com/piotte13/SwiftRoaring",  from: "0.0.1")
-    ],
-    targets: [
-        .target(
-            name: "foo",
-            dependencies: ["SwiftRoaring"]),
-    ]
-)
-```
-
-Edit ``main.swift`` (in Sources) so that it looks something like this :
+* ##### With [Carthage](https://github.com/Carthage/Carthage):
+    ```swift
+    github "piotte13/SwiftRoaring"
+    ```
+#### 2. Import SwiftRoaring in your project
 
 ```swift
 import SwiftRoaring;
