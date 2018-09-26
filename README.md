@@ -34,7 +34,7 @@ There is an entire repository dedicated to benchmarking.  You can find it [here]
 
 > The following benchmarks were produced using this CPU model: <b>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz</b>
 * [Comparison table](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/comparison-table.html)
-* [Bar chart](https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/bar-chart.html)
+* [Bar chart](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/bar-chart.html)
 
 
 ### Dependencies
