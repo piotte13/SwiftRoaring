@@ -86,8 +86,21 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Sources/**/*.{c,h,m,swift}"
+
+#spec.subspec 'croaring' do |croaring|
+#      croaring.source_files = 'Sources/CRoaring/**/*.{c,h}'
+#      croaring.public_header_files = "Sources/CRoaring/include/*.h"
+#  end
+
+
+#spec.subspec 'SwiftRoaring' do |swiftRoaring|
+#    swiftRoaring.dependency 'Sources/CRoaring'
+#    swiftRoaring.source_files = 'Sources/**/*.swift'
+#  end
+#spec.dependency  'croaring'
+  spec.source_files  = "Sources/**/*.{h,c,swift}"
   spec.exclude_files = "Classes/Exclude"
+#spec.public_header_files = "Sources/CRoaring/include/*.h"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -112,8 +125,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-   spec.framework  = "SwiftRoaring"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+#spec.framework  = "SwiftRoaring"
+   spec.frameworks = "croaring", "SwiftRoaring"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
