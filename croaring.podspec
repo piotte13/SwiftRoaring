@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint SwiftRoaring.podspec' to ensure this is a
+#  Be sure to run `pod spec lint croaring.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://docs.cocoapods.org/specification.html
@@ -15,18 +15,18 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "SwiftRoaring"
-  spec.summary      = "A short description of SwiftRoaring."
+  spec.name         = "croaring"
   spec.version      = "1.0.3"
+  spec.summary      = "A better compressed bitset in Swift."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "A better compressed bitset in Swift."
+  spec.description  = "A better compressed bitset in Swift. "
 
-  spec.homepage     = "https://github.com/solos/SwiftRoaring"
+  spec.homepage     = "https://github.com/piotte13/SwiftRoaring"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -51,7 +51,10 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "piotte13" => "jeremie.piotte@gmail.com" }
+  spec.author             = { "solos" => "lxl1217@gmail.com" }
+  # Or just: spec.author    = "solos"
+  # spec.authors            = { "solos" => "lxl1217@gmail.com" }
+  # spec.social_media_url   = "https://twitter.com/solos"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -59,8 +62,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  spec.platform     = :ios
-  spec.platform     = :ios, "8.0"
+  # spec.platform     = :ios
+  # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -86,39 +89,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-
-#spec.subspec 'croaring' do |ss|
-#        ss.source_files = 'Sources/CRoaring/*.c', 'Sources/CRoaring/include/*.h'
-#        ss.public_header_files = "Sources/CRoaring/include/*.h"
-#        ss.frameworks = 'croaring'
-#        ss.name = 'croaring'
-#    end
-#
-#    spec.subspec 'swiftRoaring' do |ss|
-#        ss.source_files = 'Sources/SwiftRoaring/*.swift'
-#        ss.frameworks = 'SwiftRoaring'
-#        ss.pod_target_xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/Sources/CRoaring/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Sources/CRoaring/', 'HEADER_SEARCH_PATHS' => 'Sources/CRoaring/include/'}
-#        ss.dependency  "croaring"
-#    end
-
-#    spec.subspec 'SwiftRoaring' do |swiftRoaring|
-#      swiftRoaring.dependency 'croaring'
-#      swiftRoaring.source_files = 'Sources/**/*.swift'
-#    end
-#
-#    spec.module_name = 'roaring'
-#    spec.prefix_header_file = false
-#spec.header_mappings_dir = "Sources/CRoaring/include/"
-    spec.public_header_files = "Sources/CRoaring/include/*.h"
-#spec.pod_target_xcconfig = {'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/Sources/CRoaring/**','LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Sources/CRoaring/'}
-#spec.dependency  'croaring'
-    spec.source_files  = "Sources/SwiftRoaring/*.{swift}"
-    spec.dependency  'croaring'
-#spec.preserve_paths = "Sources/CRoaring/module.modulemap"
-#  spec.public_header_files = "Sources/CRoaring/include/*.h"
-#  spec.exclude_files = "Classes/Exclude"
-#  spec.preserve_paths = 'Sources/CRoaring/module.modulemap'
-#spec.public_header_files = "Sources/CRoaring/include/*.h"
+  spec.source_files  = "Sources/CRoaring/*.c", "Sources/CRoaring/include/*.h"
+  spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -143,8 +115,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-#spec.framework  = "SwiftRoaring"
-#spec.frameworks = "roaring", "SwiftRoaring"
+  # spec.framework  = "SomeFramework"
+  # spec.frameworks = "SomeFramework", "AnotherFramework"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
