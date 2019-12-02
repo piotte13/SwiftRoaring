@@ -33,12 +33,13 @@ Roaring bitmaps are found to work well in many important applications:
 There is an entire repository dedicated to benchmarking.  You can find it [here](https://github.com/piotte13/SwiftRoaringBenchmarks).
 
 > The following benchmarks were produced using this CPU model: <b>Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz</b>
-* [Comparison table](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/comparison-table.html)
-* [Bar chart](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/bar-chart.html)
+* [Graphical chart](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/bar-chart.html)
+* [Detailed table](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-4770%20CPU%20%40%203.40GHz/census-income/comparison-table.html)
+
 
 > The following benchmarks were produced using this CPU model: <b>Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz</b>
-* [Comparison table](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-8700%20CPU%20%40%203.20GHz/census-income/comparison-table.html)
-* [Bar chart](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-8700%20CPU%20%40%203.20GHz/census-income/bar-chart.html)
+* [Graphical chart](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-8700%20CPU%20%40%203.20GHz/census-income/bar-chart.html)
+* [Detailed table](http://htmlpreview.github.io/?https://github.com/piotte13/SwiftRoaringBenchmarks/blob/master/Graphs/Intel(R)%20Core(TM)%20i7-8700%20CPU%20%40%203.20GHz/census-income/comparison-table.html)
 
 ### Dependencies
 
